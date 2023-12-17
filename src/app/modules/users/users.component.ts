@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
-import { IUser } from 'src/app/shared/models/user.model';
-import { UsersService } from 'src/app/shared/services/users.service';
+import { IUser } from '../../shared/models/user.model';
+import { UsersService } from '../../shared/services/users.service';
 
 @Component({
   selector: 'app-users',

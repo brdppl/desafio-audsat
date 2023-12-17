@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IUser } from 'src/app/shared/models/user.model';
+import { IUser } from '../../../../shared/models/user.model';
 
 @Component({
   selector: 'user-details',

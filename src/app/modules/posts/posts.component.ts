@@ -2,10 +2,10 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription, switchMap } from 'rxjs';
-import { IPost } from 'src/app/shared/models/post.model';
-import { IUser } from 'src/app/shared/models/user.model';
-import { PostsService } from 'src/app/shared/services/posts.service';
-import { UsersService } from 'src/app/shared/services/users.service';
+import { IPost } from '../../shared/models/post.model';
+import { IUser } from '../../shared/models/user.model';
+import { PostsService } from '../../shared/services/posts.service';
+import { UsersService } from '../../shared/services/users.service';
 
 @Component({
   selector: 'app-posts',
