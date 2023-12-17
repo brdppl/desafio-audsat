@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
 import { IPost } from '../../../../shared/models/post.model';
 import { CommentsService } from '../../../../shared/services/comments.service';
+import { ErrorMsg, SuccessMsg } from '../../../../shared/models/messages.enum';
 
 @Component({
   selector: 'post-area',
@@ -64,12 +65,12 @@ export class PostAreaComponent implements OnDestroy {
       this.commentsService.removeComment(id).subscribe({
         next: () => {
           this.posts.splice(index, 1);
-          this.snackBar.open('Post excluído com sucesso!', '', {
+          this.snackBar.open(SuccessMsg.REMOVE_POST_SUCCESS, '', {
             duration: 5000
           });
         },
         error: () => {
-          this.snackBar.open('Erro ao excluir o post', '', {
+          this.snackBar.open(ErrorMsg.REMOVE_POST_ERROR, '', {
             duration: 5000
           });
         }
@@ -90,7 +91,7 @@ export class PostAreaComponent implements OnDestroy {
           });
         },
         error: () => {
-          this.snackBar.open('Erro ao listar os comentários', '', {
+          this.snackBar.open(ErrorMsg.LIST_COMMENTS_ERROR, '', {
             duration: 5000
           });
         }

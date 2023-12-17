@@ -10,6 +10,7 @@ import { CommentsService } from '../../../../shared/services/comments.service';
 import { of, throwError } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IComment } from '../../../../shared/models/comment.model';
+import { ErrorMsg, SuccessMsg } from '../../../../shared/models/messages.enum';
 
 const postsMock: IPost[] = posts;
 const commentsMock: IComment[] = comments;
@@ -71,7 +72,7 @@ describe('PostAreaComponent', () => {
 
       expect(component.posts).toHaveLength(2);
       expect(snackBar.open).toHaveBeenCalledWith(
-        'Post excluído com sucesso!',
+        SuccessMsg.REMOVE_POST_SUCCESS,
         '',
         { duration: 5000 }
       );
@@ -85,7 +86,7 @@ describe('PostAreaComponent', () => {
 
       expect(component.posts).toHaveLength(2);
       expect(snackBar.open).toHaveBeenCalledWith(
-        'Erro ao excluir o post',
+        ErrorMsg.REMOVE_POST_ERROR,
         '',
         { duration: 5000 }
       );
@@ -122,7 +123,7 @@ describe('PostAreaComponent', () => {
 
       expect(commentsService.getCommentsByPostId).toHaveBeenCalledWith(id);
       expect(snackBar.open).toHaveBeenCalledWith(
-        'Erro ao listar os comentários',
+        ErrorMsg.LIST_COMMENTS_ERROR,
         '',
         { duration: 5000 }
       );
