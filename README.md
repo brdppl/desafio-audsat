@@ -38,7 +38,7 @@ Para rodar os testes unitários do frontend, basta abrir o terminal e executar o
 > yarn test
 ```
 
-Ou
+Ou para ver a cobertura
 
 ```console
 > cd desafio-audsat
