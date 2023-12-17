@@ -8,6 +8,7 @@ import { of, throwError } from 'rxjs';
 import { IUser } from 'src/app/shared/models/user.model';
 import users from '../../../mocks/users.json';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ErrorMsg } from '../../shared/models/messages.enum';
 
 const usersMock: IUser[] = users;
 
@@ -52,7 +53,11 @@ describe('UsersComponent', () => {
       component['getUsers']();
 
       expect(usersService.getUsers).toHaveBeenCalled();
-      expect(snackBar.open).toHaveBeenCalled();
+      expect(snackBar.open).toHaveBeenCalledWith(
+        ErrorMsg.LIST_USERS_ERROR,
+        '',
+        { duration: 5000 }
+      );
     });
   });
 });

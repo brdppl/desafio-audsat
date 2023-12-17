@@ -6,6 +6,7 @@ import { IPost } from '../../shared/models/post.model';
 import { IUser } from '../../shared/models/user.model';
 import { PostsService } from '../../shared/services/posts.service';
 import { UsersService } from '../../shared/services/users.service';
+import { ErrorMsg } from '../../shared/models/messages.enum';
 
 @Component({
   selector: 'app-posts',
@@ -46,7 +47,7 @@ export class PostsComponent implements OnInit, OnDestroy {
           this.posts = data;
         },
         error: () => {
-          this.snackBar.open('Erro ao listar os posts', '', {
+          this.snackBar.open(ErrorMsg.LIST_POSTS_ERROR, '', {
             duration: 5000
           });
         }
@@ -66,7 +67,7 @@ export class PostsComponent implements OnInit, OnDestroy {
           this.user = data;
         },
         error: () => {
-          this.snackBar.open('Erro ao buscar os dados do usuário', '', {
+          this.snackBar.open(ErrorMsg.GET_USER_DATA_ERROR, '', {
             duration: 5000
           });
         }

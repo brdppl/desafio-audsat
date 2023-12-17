@@ -13,6 +13,7 @@ import { IPost } from '../../shared/models/post.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UsersService } from '../../shared/services/users.service';
 import { IUser } from '../../shared/models/user.model';
+import { ErrorMsg } from '../../shared/models/messages.enum';
 
 const postsMock: IPost[] = posts;
 const usersMock: IUser[] = users;
@@ -65,7 +66,7 @@ describe('PostsComponent', () => {
 
       expect(postsService.getUserPost).toHaveBeenCalled();
       expect(snackBar.open).toHaveBeenCalledWith(
-        'Erro ao listar os posts',
+        ErrorMsg.LIST_POSTS_ERROR,
         '',
         { duration: 5000 }
       );
@@ -89,7 +90,7 @@ describe('PostsComponent', () => {
 
       expect(usersService.getUserById).toHaveBeenCalled();
       expect(snackBar.open).toHaveBeenCalledWith(
-        'Erro ao buscar os dados do usuário',
+        ErrorMsg.GET_USER_DATA_ERROR,
         '',
         { duration: 5000 }
       );

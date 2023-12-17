@@ -3,6 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
 import { IUser } from '../../shared/models/user.model';
 import { UsersService } from '../../shared/services/users.service';
+import { ErrorMsg } from '../../shared/models/messages.enum';
 
 @Component({
   selector: 'app-users',
@@ -34,7 +35,7 @@ export class UsersComponent implements OnInit, OnDestroy {
           this.data = data;
         },
         error: () => {
-          this.snackBar.open('Não foi possível carregar os usuários', '', {
+          this.snackBar.open(ErrorMsg.LIST_USERS_ERROR, '', {
             duration: 5000
           });
         }
