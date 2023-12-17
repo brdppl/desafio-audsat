@@ -1,0 +1,24 @@
+.posts {
+  padding: var(--container-padding);
+
+  &__title {
+    font-size: var(--h1);
+    color: var(--darkGrey);
+    margin-bottom: var(--sm);
+  }
+}
+
+.container {
+  display: grid;
+  grid-template: 
+    'menu main'
+    'menu main'
+    / 30% 70%;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}

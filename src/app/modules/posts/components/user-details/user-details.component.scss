@@ -1,0 +1,60 @@
+.userArea {
+  grid-area: menu;
+  padding: var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user {
+  &__avatar {
+    width: var(--xl);
+    margin-bottom: var(--nano);
+  }
+
+  &__name {
+    font-size: var(--h3);
+    text-align: center;
+    margin: 0;
+  }
+
+  &__username {
+    font-size: var(--text);
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.personal {
+  margin-top: var(--quarck3);
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.address {
+  margin-top: var(--quarck3);
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__map {
+    border: none;
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .personal,
+  .address {
+    display: none;
+  }
+}

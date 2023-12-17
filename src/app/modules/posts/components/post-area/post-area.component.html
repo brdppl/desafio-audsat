@@ -1,0 +1,50 @@
+<div class="emptyPosts" *ngIf="!posts.length">
+  <mat-icon class="emptyPosts__icon">
+    sentiment_dissatisfied
+  </mat-icon>
+  <p class="emptyPosts__message">Nenhum post encontrado</p>
+</div>
+
+<section class="postArea">
+  <ul class="post__list">
+    <li class="post__item" *ngFor="let post of posts; let index = index">
+      <mat-card class="post__card" (click)="toggleComment(post)">
+        <mat-card-header class="post__header">
+          <h1 class="post__title">{{ post.title }}</h1>
+          <button
+            *ngIf="post.isShowingComments"
+            mat-icon-button
+            class="post__btnRemove"
+            color="warn"
+            (click)="removeComment($event, post, index)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="post__content">{{ post.body }}</p>
+
+          <mat-card
+            class="comments"
+            *ngIf="post.isShowingComments"
+            [@inOutAnimation]
+          >
+            <mat-card-content>
+              <ul class="comments__list">
+                <li
+                  class="comments__item"
+                  *ngFor="let comment of post.comments; let last = last"
+                >
+                  <p class="comments__email">{{ comment.email }}</p>
+                  <p class="comments__name"><b>{{ comment.name }}</b></p>
+                  <p class="comments__body">{{ comment.body }}</p>
+                  <mat-divider *ngIf="!last"></mat-divider>
+                </li>
+              </ul>
+            </mat-card-content>
+          </mat-card>
+        </mat-card-content>
+      </mat-card>
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,14 @@
+.filter {
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  overflow: scroll;
+}
+
+.column {
+  &--small {
+    width: var(--lg);
+  }
+}

@@ -1,0 +1,30 @@
+.users {
+  padding: var(--container-padding);
+
+  &__title {
+    font-size: var(--h1);
+    color: var(--darkGrey);
+    margin-bottom: var(--sm);
+  }
+}
+
+.emptyGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: var(--lg);
+  gap: var(--nano);
+
+  &__icon {
+    width: var(--lg);
+    height: var(--lg);
+    font-size: var(--lg);
+  }
+
+  &__message {
+    margin: 0;
+    font-size: var(--h2);
+    text-align: center;
+  }
+}

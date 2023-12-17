@@ -1,27 +1,42 @@
-# TesteAudsat
+# Desafio Técnico - Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
+### Instalação
 
-## Development server
+Este projeto foi desenvolvido utilzando o [Angular CLI](https://angular.io/cli) 16.1.1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Caso não tenha instalado em sua máquina, execute o comando `npm install -g @angular/cli` no seu terminal.
 
-## Code scaffolding
+Para rodar o projeto basta clonar o repositório e executar os seguintes comandos no terminal:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```console
+> cd desafio-audsat
+> yarn install
+> yarn start
+```
 
-## Build
+Acesse através da URL `http://localhost:4200` no seu navagador.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Testes unitários
 
-## Running unit tests
+Para rodar os testes unitários do frontend, basta abrir o terminal e executar os seguintes comandos:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```console
+> cd desafio-audsat
+> yarn test
+```
 
-## Running end-to-end tests
+Ou
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```console
+> cd desafio-audsat
+> yarn test:coverage
+```
 
-## Further help
+### Lint
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para rodar o lint no frontend, basta abrir o terminal e executar os seguintes comandos:
+
+```console
+> cd desafio-audsat
+> yarn lint
+```

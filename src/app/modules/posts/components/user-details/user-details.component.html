@@ -1,0 +1,30 @@
+<aside class="userArea">
+  <img src="assets/img/avatar.png" class="user__avatar" />
+  <div class="user__info">
+    <h2 class="user__name">{{ user.name }}</h2>
+    <p class="user__username">@{{ user.username }}</p>
+
+    <mat-card class="personal">
+      <mat-card-header>
+        <h3 class="personal__title">Informações pessoais</h3>
+      </mat-card-header>
+      <mat-card-content>
+        <p><b>E-mail:</b> {{ user.email }}</p>
+        <p><b>Telefone:</b> {{ user.phone }}</p>
+        <p><b>Empresa:</b> {{ user.company && user.company.name }}</p>
+        <p><b>Website: </b> <a href="#">{{ user.website }}</a></p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="address">
+      <mat-card-header>
+        <h3 class="address__title">Endereço</h3>
+      </mat-card-header>
+      <mat-card-content>
+        <p><b>Cidade:</b> {{ user.address && user.address.city }}</p>
+        <p><b>Rua:</b> {{ user.address && user.address.street }}</p>
+        <p><b>Compl.:</b> {{ user.address && user.address.suite }}</p>
+        <p><b>Código postal:</b> {{ user.address && user.address.zipcode }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</aside>

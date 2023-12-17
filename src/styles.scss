@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$audsat-primary: (
+  50: #007839,
+  100: #007839,
+  200: #007839,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+  )
+);
+
+$audsat-secondary: (
+  50: #003040,
+  100: #003040,
+  200: #003040,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+  )
+);
+
+$teste-audsat-primary: mat.define-palette($audsat-primary, 100, 50, 200);
+$teste-audsat-accent: mat.define-palette($audsat-secondary, 100, 50, 200);
+$teste-audsat-warn: mat.define-palette(mat.$red-palette);
+
+$teste-audsat-theme: mat.define-light-theme((
+  color: (
+    primary: $teste-audsat-primary,
+    accent: $teste-audsat-accent,
+    warn: $teste-audsat-warn,
+  )
+));
+
+@include mat.all-component-themes($teste-audsat-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Custom styles
+@import './app/styles/primitive';
+@import './app/styles/system';

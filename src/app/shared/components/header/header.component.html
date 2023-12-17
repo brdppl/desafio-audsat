@@ -1,0 +1,20 @@
+<mat-toolbar class="header">
+  <a routerLink="/" class="header__logo">
+    <img src="assets/img/logo.svg"/>
+    <img src="assets/img/tipografia.svg"/>
+  </a>
+
+  <nav class="header__menu">
+    <ul class="header__list">
+      <li class="header__item" *ngFor="let item of routes">
+        <a
+          class="header__link"
+          [routerLink]="item.route"
+          [routerLinkActive]="item.route ? 'header__link--active' : ''"
+        >
+          {{ item.name }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</mat-toolbar>

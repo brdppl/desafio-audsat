@@ -1,0 +1,16 @@
+<section class="users">
+  <h1 class="users__title">Lista de usuários</h1>
+  
+  <users-grid
+    *ngIf="data.length; else emptyGrid"
+    [data]="data"
+  ></users-grid>
+  <ng-template #emptyGrid>
+    <div class="emptyGrid">
+      <mat-icon class="emptyGrid__icon">
+        sentiment_dissatisfied
+      </mat-icon>
+      <p class="emptyGrid__message">Nenhum dado encontrado</p>
+    </div>
+  </ng-template>
+</section>
