@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "name": "user",
+    "username": "user1",
+    "email": "user@user.com",
+    "phone": "5551999998888",
+    "website": "www.user.com",
+    "company": {
+      "bs": "mock bs",
+      "catchPhrase": "mock catchPhrase",
+      "name": "some company"
+    },
+    "address": {
+      "city": "Porto Alegre",
+      "geo": {
+        "lat": "1",
+        "lng": "-1"
+      },
+      "street": "Gaston Englert",
+      "suite": "Apto 9999",
+      "zipcode": "99999-999"
+    }
+  },
+  {
+    "id": 2,
+    "name": "user",
+    "username": "user2",
+    "email": "user2@user.com",
+    "phone": "5551999998889",
+    "website": "www.user2.com",
+    "company": {
+      "bs": "mock bs",
+      "catchPhrase": "mock catchPhrase",
+      "name": "some company"
+    },
+    "address": {
+      "city": "Porto Alegre",
+      "geo": {
+        "lat": "1",
+        "lng": "-1"
+      },
+      "street": "Gaston Englert",
+      "suite": "Apto 9998",
+      "zipcode": "99999-999"
+    }
+  }
+]

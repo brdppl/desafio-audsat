@@ -2,8 +2,8 @@ import { AfterViewInit, Component, Input, OnChanges, SimpleChanges, ViewChild } 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { IUser } from 'src/app/shared/models/user.model';
-import { UsersGridColumns } from 'src/app/shared/models/users-grid-columns.enum';
+import { IUser } from '../../../../shared/models/user.model';
+import { UsersGridColumns } from '../../../../shared/models/users-grid-columns.enum';
 
 @Component({
   selector: 'users-grid',

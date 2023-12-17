@@ -2,8 +2,8 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnDestroy } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
-import { IPost } from 'src/app/shared/models/post.model';
-import { CommentsService } from 'src/app/shared/services/comments.service';
+import { IPost } from '../../../../shared/models/post.model';
+import { CommentsService } from '../../../../shared/services/comments.service';
 
 @Component({
   selector: 'post-area',

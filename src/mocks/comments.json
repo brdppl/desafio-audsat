@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "postId": 1,
+    "name": "name 1",
+    "email": "name1@email.com",
+    "body": "lorem ipsum dolor sit amet"
+  },
+  {
+    "id": 2,
+    "postId": 1,
+    "name": "name 1",
+    "email": "name1@email.com",
+    "body": "lorem ipsum dolor sit amet"
+  },
+  {
+    "id": 3,
+    "postId": 1,
+    "name": "name 1",
+    "email": "name1@email.com",
+    "body": "lorem ipsum dolor sit amet"
+  }
+]
