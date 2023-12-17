@@ -35,7 +35,7 @@
                   class="comments__item"
                   *ngFor="let comment of post.comments; let last = last"
                 >
-                  <p class="comments__email">{{ comment.email }}</p>
+                  <p class="comments__email">> {{ comment.email }}</p>
                   <p class="comments__name"><b>{{ comment.name }}</b></p>
                   <p class="comments__body">{{ comment.body }}</p>
                   <mat-divider *ngIf="!last"></mat-divider>
